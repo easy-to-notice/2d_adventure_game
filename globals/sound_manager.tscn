@@ -1,0 +1,103 @@
+[gd_scene load_steps=16 format=3 uid="uid://d6nahcrq53rs"]
+
+[ext_resource type="Script" uid="uid://bgtfy62mih6ol" path="res://globals/sound_manager.gd" id="1_tfwxo"]
+[ext_resource type="AudioStream" uid="uid://cnb83b06mrnnh" path="res://assets/sfx/07_human_atk_sword_1.wav" id="2_7m4p4"]
+[ext_resource type="AudioStream" uid="uid://bm033np0v17qi" path="res://assets/sfx/16_human_walk_stone_1.wav" id="2_r2462"]
+[ext_resource type="AudioStream" uid="uid://cxfdr7ags0ndp" path="res://assets/sfx/07_human_atk_sword_2.wav" id="3_pf7bt"]
+[ext_resource type="AudioStream" uid="uid://ckdwl81yhdn12" path="res://assets/sfx/12_human_jump_1.wav" id="3_yqr7p"]
+[ext_resource type="AudioStream" uid="uid://g8grhhn22gm6" path="res://assets/sfx/07_human_atk_sword_3.wav" id="4_d23r7"]
+[ext_resource type="AudioStream" uid="uid://jkfsmly6xsp4" path="res://assets/sfx/impactGlass_heavy_000.ogg" id="4_yqr7p"]
+[ext_resource type="AudioStream" uid="uid://5iqbfbqxy8r0" path="res://assets/sfx/impactGlass_medium_000.ogg" id="5_61b4e"]
+[ext_resource type="AudioStream" uid="uid://cger2v41dj0np" path="res://assets/sfx/15_human_dash_1.wav" id="5_d23r7"]
+[ext_resource type="AudioStream" uid="uid://nf78vsq0rht7" path="res://assets/sfx/21_orc_damage_2.wav" id="7_h0gmd"]
+[ext_resource type="AudioStream" uid="uid://c5mj62auqoffi" path="res://assets/sfx/24_orc_death_spin.wav" id="7_nkb21"]
+[ext_resource type="AudioStream" uid="uid://ch2uhymcmff0q" path="res://assets/sfx/26_sword_hit_1.wav" id="8_am1vo"]
+
+[sub_resource type="Animation" id="Animation_am1vo"]
+resource_name = "run"
+length = 0.12
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SFX/16HumanWalkStone1:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_7yfr0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SFX/16HumanWalkStone1:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_evlv8"]
+_data = {
+&"RESET": SubResource("Animation_7yfr0"),
+&"run": SubResource("Animation_am1vo")
+}
+
+[node name="SoundManager" type="Node"]
+process_mode = 3
+script = ExtResource("1_tfwxo")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="16HumanWalkStone1" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("2_r2462")
+
+[node name="Attack" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("2_7m4p4")
+bus = &"Sfx"
+
+[node name="Attack2" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("3_pf7bt")
+
+[node name="Attack3" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("4_d23r7")
+
+[node name="Slide" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_d23r7")
+
+[node name="Jump" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("3_yqr7p")
+bus = &"Sfx"
+
+[node name="Hit" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("8_am1vo")
+
+[node name="Hurt" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("7_h0gmd")
+
+[node name="Death" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("7_nkb21")
+
+[node name="UIPress" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("4_yqr7p")
+bus = &"Sfx"
+
+[node name="UIFocus" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_61b4e")
+bus = &"Sfx"
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Bgm"
+
+[node name="RunSfx" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_evlv8")
+}

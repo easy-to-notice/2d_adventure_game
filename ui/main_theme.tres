@@ -1,0 +1,71 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://567gcw221041"]
+
+[ext_resource type="Texture2D" uid="uid://pp1hs7qu0arj" path="res://assets/legacy_fantasy/HUD.png" id="1_6tukj"]
+[ext_resource type="FontFile" uid="uid://ceu0bsqehknwt" path="res://assets/SmileySans-Oblique.otf" id="2_3xb56"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_joxlk"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lsmgg"]
+texture = ExtResource("1_6tukj")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(94, 14, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tukj"]
+atlas = ExtResource("1_6tukj")
+region = Rect2(3, 130, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xb56"]
+atlas = ExtResource("1_6tukj")
+region = Rect2(19, 130, 11, 11)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6tukj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lsmgg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_11ing"]
+texture = ExtResource("1_6tukj")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+expand_margin_bottom = 1.0
+region_rect = Rect2(95, 207, 18, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6tukj"]
+content_margin_left = 16.0
+content_margin_top = 4.0
+content_margin_right = 16.0
+content_margin_bottom = 4.0
+texture = ExtResource("1_6tukj")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 2
+region_rect = Rect2(64, 272, 16, 16)
+
+[resource]
+default_font = ExtResource("2_3xb56")
+Button/colors/font_outline_color = Color(0, 0, 0, 0.545098)
+Button/colors/font_pressed_color = Color(1, 1, 1, 0.513726)
+Button/constants/outline_size = 6
+Button/styles/disabled = SubResource("StyleBoxEmpty_joxlk")
+Button/styles/focus = SubResource("StyleBoxTexture_lsmgg")
+Button/styles/hover = SubResource("StyleBoxEmpty_joxlk")
+Button/styles/normal = SubResource("StyleBoxEmpty_joxlk")
+Button/styles/pressed = SubResource("StyleBoxEmpty_joxlk")
+HSlider/icons/grabber = SubResource("AtlasTexture_6tukj")
+HSlider/icons/grabber_highlight = SubResource("AtlasTexture_3xb56")
+HSlider/styles/grabber_area = SubResource("StyleBoxEmpty_6tukj")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_lsmgg")
+HSlider/styles/slider = SubResource("StyleBoxTexture_11ing")
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.470588)
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_6tukj")
