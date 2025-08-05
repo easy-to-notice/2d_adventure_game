@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=11 format=3 uid="uid://567gcw221041"]
 
-[ext_resource type="Texture2D" uid="uid://pp1hs7qu0arj" path="res://assets/legacy_fantasy/HUD.png" id="1_6tukj"]
-[ext_resource type="FontFile" uid="uid://ceu0bsqehknwt" path="res://assets/SmileySans-Oblique.otf" id="2_3xb56"]
+[ext_resource type="Texture2D" uid="uid://cb3fe33xx5eck" path="res://assets/legacy_fantasy/HUD.png" id="1_6tukj"]
+[ext_resource type="FontFile" uid="uid://bopag7f12y4tc" path="res://assets/SmileySans-Oblique.otf" id="2_3xb56"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_joxlk"]
 content_margin_left = 4.0

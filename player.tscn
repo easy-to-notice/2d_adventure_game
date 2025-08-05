@@ -1,20 +1,20 @@
 [gd_scene load_steps=46 format=3 uid="uid://dsp5w8eace5mt"]
 
-[ext_resource type="Texture2D" uid="uid://b3wgjd6h5wp7i" path="res://assets/generic_char/char_blue_1.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://bjg24152kc135" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://wp5o5j3l0jt0" path="res://assets/generic_char/char_blue_2.png" id="3_hqtel"]
-[ext_resource type="Script" uid="uid://wxpvkmup0m2o" path="res://classes/StateMachine.gd" id="3_i3pqv"]
-[ext_resource type="Script" uid="uid://mpqwghcwxkyg" path="res://classes/Hurtobx.gd" id="3_sweqy"]
-[ext_resource type="Script" uid="uid://nf8ccmwj6oyh" path="res://classes/Hitbox.gd" id="4_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://chfckx5j4ohp6" path="res://assets/generic_char/char_blue_1.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dhdf0v23t585m" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://bn07m7bdgjkjo" path="res://assets/generic_char/char_blue_2.png" id="3_hqtel"]
+[ext_resource type="Script" uid="uid://cgvt62w26q7w7" path="res://classes/StateMachine.gd" id="3_i3pqv"]
+[ext_resource type="Script" uid="uid://bvvdyw81ukwi5" path="res://classes/Hurtobx.gd" id="3_sweqy"]
+[ext_resource type="Script" uid="uid://xyks1087b8lf" path="res://classes/Hitbox.gd" id="4_2hs0m"]
 [ext_resource type="PackedScene" uid="uid://xkj7u0lnd2er" path="res://ui/game_over_screen.tscn" id="8_b26j0"]
 [ext_resource type="PackedScene" uid="uid://dkctmuvn5t01o" path="res://ui/status_panel.tscn" id="8_dw050"]
 [ext_resource type="PackedScene" uid="uid://cmv0dpdpogfli" path="res://ui/virtual_joypad.tscn" id="8_urp6f"]
-[ext_resource type="Texture2D" uid="uid://ckbeo4l7o4631" path="res://assets/gdb-gamepad-2/gdb-keyboard-2.png" id="9_b26j0"]
+[ext_resource type="Texture2D" uid="uid://dh3g2y6rqklcb" path="res://assets/gdb-gamepad-2/gdb-keyboard-2.png" id="9_b26j0"]
 [ext_resource type="PackedScene" uid="uid://bqg0qyt5pk5l5" path="res://ui/pause_scene.tscn" id="10_n7ghd"]
-[ext_resource type="Texture2D" uid="uid://ditoh2dveeaj6" path="res://assets/gdb-gamepad-2/gdb-switch-2.png" id="11_ivps1"]
-[ext_resource type="Script" uid="uid://cnnahdjox5auc" path="res://classes/interaction_icon.gd" id="12_urp6f"]
-[ext_resource type="AudioStream" uid="uid://bm033np0v17qi" path="res://assets/sfx/16_human_walk_stone_1.wav" id="14_606se"]
-[ext_resource type="AudioStream" uid="uid://b3w3vf2pya0eg" path="res://assets/sfx/16_human_walk_stone_2.wav" id="15_u1c27"]
+[ext_resource type="Texture2D" uid="uid://bjecdfl0x0k5x" path="res://assets/gdb-gamepad-2/gdb-switch-2.png" id="11_ivps1"]
+[ext_resource type="Script" uid="uid://b5vk62wb5hrsx" path="res://classes/interaction_icon.gd" id="12_urp6f"]
+[ext_resource type="AudioStream" uid="uid://dfls8c23dygbh" path="res://assets/sfx/16_human_walk_stone_1.wav" id="14_606se"]
+[ext_resource type="AudioStream" uid="uid://bs831ikg3ijy" path="res://assets/sfx/16_human_walk_stone_2.wav" id="15_u1c27"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hs0m"]
 size = Vector2(13, 28)
@@ -2448,7 +2448,6 @@ visible = false
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("3_sweqy")
-metadata/_custom_type_script = "uid://mpqwghcwxkyg"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Graphics/Hurtbox"]
 position = Vector2(-0.5, -14)
@@ -2459,7 +2458,6 @@ visible = false
 collision_layer = 0
 collision_mask = 16
 script = ExtResource("4_2hs0m")
-metadata/_custom_type_script = "uid://nf8ccmwj6oyh"
 
 [node name="AttackShape" type="CollisionShape2D" parent="Graphics/Hitbox"]
 position = Vector2(16, -17.5)
@@ -2504,7 +2502,6 @@ one_shot = true
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("3_i3pqv")
-metadata/_custom_type_script = "uid://wxpvkmup0m2o"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 20

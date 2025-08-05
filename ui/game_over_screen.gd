@@ -28,5 +28,4 @@ func show_game_over():
 	
 
 func close_bgm():
-	var tween=create_tween()
-	tween.tween_property(SoundManager.bgm_player,"volume_db",-30,1.0)
+	SoundManager.fade_bgm_to(-40,1.2)

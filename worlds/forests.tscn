@@ -1,16 +1,16 @@
 [gd_scene load_steps=15 format=3 uid="uid://b5yir1nwllh77"]
 
-[ext_resource type="Script" uid="uid://2jeuaut5g0qq" path="res://worlds/world.gd" id="1_qbgr6"]
+[ext_resource type="Script" uid="uid://bw1pnirmfj3vl" path="res://worlds/world.gd" id="1_qbgr6"]
 [ext_resource type="TileSet" uid="uid://dm6m4g6sfgk76" path="res://assets/tlies.tres" id="2_7h0y8"]
-[ext_resource type="AudioStream" uid="uid://blasc4xffoe7l" path="res://assets/bgm/21 11 forest LOOP.mp3" id="2_32rf6"]
+[ext_resource type="AudioStream" uid="uid://daq5brn4d2hlf" path="res://assets/bgm/21 11 forest LOOP.mp3" id="2_32rf6"]
 [ext_resource type="PackedScene" uid="uid://b2sy8hw4lj54k" path="res://objects/mine_gate.tscn" id="3_qbgr6"]
-[ext_resource type="Script" uid="uid://dc80spb7lytxb" path="res://classes/Entry_Point.gd" id="4_7h0y8"]
+[ext_resource type="Script" uid="uid://de20pvjajmjvb" path="res://classes/Entry_Point.gd" id="4_7h0y8"]
 [ext_resource type="PackedScene" uid="uid://dsp5w8eace5mt" path="res://player.tscn" id="5_16wf7"]
-[ext_resource type="Texture2D" uid="uid://lffqqp7ejusk" path="res://assets/legacy_fantasy/Background/Background.png" id="6_32rf6"]
+[ext_resource type="Texture2D" uid="uid://bgvd4nstx4g3x" path="res://assets/legacy_fantasy/Background/Background.png" id="6_32rf6"]
 [ext_resource type="PackedScene" uid="uid://cdmihsqrl54eq" path="res://objects/save_stone.tscn" id="6_r56ix"]
-[ext_resource type="Script" uid="uid://c8sgwr22pey6q" path="res://classes/ShakyCamera.gd" id="7_32rf6"]
-[ext_resource type="Texture2D" uid="uid://cgq8wri08a1ef" path="res://assets/legacy_fantasy/Trees/Background.png" id="7_r56ix"]
-[ext_resource type="Texture2D" uid="uid://dlw7yqisxvl0u" path="res://assets/legacy_fantasy/Trees/Tree-Assets.png" id="8_16wf7"]
+[ext_resource type="Script" uid="uid://dxa82klls4l5e" path="res://classes/ShakyCamera.gd" id="7_32rf6"]
+[ext_resource type="Texture2D" uid="uid://bb71k3ai0vpvi" path="res://assets/legacy_fantasy/Trees/Background.png" id="7_r56ix"]
+[ext_resource type="Texture2D" uid="uid://bke0wxtuquyb7" path="res://assets/legacy_fantasy/Trees/Tree-Assets.png" id="8_16wf7"]
 [ext_resource type="PackedScene" uid="uid://cnapd5gcuf75e" path="res://enemies/baor.tscn" id="9_38ccd"]
 [ext_resource type="Theme" uid="uid://567gcw221041" path="res://ui/main_theme.tres" id="13_16wf7"]
 
@@ -46,13 +46,11 @@ entry_point = "BottomEntry"
 [node name="TopEntry" type="Marker2D" parent="TileMap"]
 position = Vector2(91, -116)
 script = ExtResource("4_7h0y8")
-metadata/_custom_type_script = "uid://dc80spb7lytxb"
 
 [node name="BottomEntry" type="Marker2D" parent="TileMap"]
 position = Vector2(741, 143)
 script = ExtResource("4_7h0y8")
 direction = -1
-metadata/_custom_type_script = "uid://dc80spb7lytxb"
 
 [node name="SaveStone" parent="TileMap" instance=ExtResource("6_r56ix")]
 position = Vector2(368, 0)

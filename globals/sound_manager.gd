@@ -44,3 +44,6 @@ func get_volume(bus_index:int)->float:
 func set_volume(bus_index:int,v:float):
 	var db:=linear_to_db(v)
 	AudioServer.set_bus_volume_db(bus_index,db)
+
+func fade_bgm_to(target_db:float, duration:float):
+	create_tween().tween_property(bgm_player, "volume_db", target_db, duration)
